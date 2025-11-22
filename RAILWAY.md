@@ -24,14 +24,25 @@ The repository includes a `Dockerfile` that:
 - Better control over the build process
 - Faster subsequent deployments with Docker layer caching
 
-### Method 2: Nixpacks
+### Method 2: Nixpacks (Alternative)
 
-Railway's automatic builder can also be used with the included `nixpacks.toml` configuration.
+Railway's automatic builder can also be used with the included `nixpacks.toml` configuration. This uses Python's built-in HTTP server instead of nginx.
 
-**Advantages:**
+**Note:** The Dockerfile method is strongly recommended as it provides:
+- Production-grade nginx server with proper configuration
+- Better caching and compression
+- Security headers
+- SPA routing support
+
+**Nixpacks Advantages:**
 - Simpler configuration
-- Managed by Railway
+- No Docker required
 - Automatic updates to build tools
+
+**Nixpacks Limitations:**
+- Uses Python HTTP server (not production-optimized)
+- No advanced caching or compression
+- Limited configuration options
 
 ## Quick Start
 

@@ -15,12 +15,7 @@
           "interval": 30,
           "timeout": 10
         },
-        "domains": [
-          {
-            "domain": "${{RAILWAY_STATIC_URL}}",
-            "wildcard": false
-          }
-        ],
+
         "env": {
           "PORT": "8080"
         }

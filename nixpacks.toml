@@ -1,8 +1,9 @@
 # Nixpacks configuration for Railway deployment
-# This is an alternative to using Dockerfile
+# Note: Using Dockerfile is recommended for better control
+# This is a simplified alternative but requires manual nginx setup
 
 [phases.setup]
-nixPkgs = ["flutter", "nginx"]
+nixPkgs = ["flutter"]
 
 [phases.install]
 cmds = ["flutter pub get"]
@@ -10,11 +11,7 @@ cmds = ["flutter pub get"]
 [phases.build]
 cmds = ["flutter build web --release --web-renderer html"]
 
-[phases.deploy]
-cmds = [
-  "cp -r build/web/* /usr/share/nginx/html/",
-  "nginx -g 'daemon off;'"
-]
-
 [start]
-cmd = "nginx -g 'daemon off;'"
+# Note: Railway requires a web server. 
+# For Nixpacks, consider using a simple Python or Node server instead of nginx
+cmd = "cd build/web && python3 -m http.server 8080"

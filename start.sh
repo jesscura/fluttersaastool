@@ -14,6 +14,12 @@ fi
 
 echo "✓ Flutter found: $(flutter --version | head -n 1)"
 
+# Check if we're in the project directory
+if [ ! -f "pubspec.yaml" ]; then
+    echo "❌ pubspec.yaml not found. Please run this script from the project root."
+    exit 1
+fi
+
 # Get dependencies
 echo "📦 Getting dependencies..."
 flutter pub get
