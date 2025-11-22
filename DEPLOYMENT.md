@@ -98,6 +98,28 @@ The output will be in `build/web/`.
    }
    ```
 
+### Deploy to Railway
+
+Railway provides a simple deployment platform with built-in CI/CD and automatic HTTPS.
+
+See [RAILWAY.md](./RAILWAY.md) for detailed Railway deployment instructions.
+
+**Quick Start:**
+
+1. Sign in to [Railway](https://railway.app/)
+2. Create a new project from GitHub repository
+3. Select `jesscura/fluttersaastool`
+4. Railway automatically detects the `Dockerfile` and deploys
+5. Access your app at the provided Railway URL
+
+**Features:**
+- ✅ Automatic HTTPS and SSL certificates
+- ✅ Built-in CI/CD from GitHub
+- ✅ Custom domain support
+- ✅ Environment variable management
+- ✅ Real-time logs and monitoring
+- ✅ Free tier available ($5 credit per month)
+
 ## Android Deployment
 
 ### 1. Generate Signing Key

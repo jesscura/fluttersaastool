@@ -1,0 +1,57 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# CI/CD
+.github
+
+# Documentation
+*.md
+!README.md
+CHANGELOG.md
+CONTRIBUTING.md
+
+# IDE
+.vscode
+.idea
+*.iml
+.DS_Store
+
+# Build artifacts
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+
+# Tests
+test/
+coverage/
+
+# Android
+android/
+!android/app/src/main/AndroidManifest.xml
+
+# iOS
+ios/
+macos/
+windows/
+linux/
+
+# Firebase (if not needed for web)
+google-services.json
+GoogleService-Info.plist
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Keys and secrets
+*.jks
+*.keystore
+key.properties
+
+# Logs
+*.log
