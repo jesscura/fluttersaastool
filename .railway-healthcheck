@@ -1,0 +1,10 @@
+#!/bin/sh
+# Railway health check script
+# This script can be used for custom health checks if needed
+
+# Check if nginx is running
+if pgrep nginx > /dev/null; then
+    exit 0
+else
+    exit 1
+fi

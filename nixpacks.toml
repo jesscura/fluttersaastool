@@ -1,0 +1,20 @@
+# Nixpacks configuration for Railway deployment
+# This is an alternative to using Dockerfile
+
+[phases.setup]
+nixPkgs = ["flutter", "nginx"]
+
+[phases.install]
+cmds = ["flutter pub get"]
+
+[phases.build]
+cmds = ["flutter build web --release --web-renderer html"]
+
+[phases.deploy]
+cmds = [
+  "cp -r build/web/* /usr/share/nginx/html/",
+  "nginx -g 'daemon off;'"
+]
+
+[start]
+cmd = "nginx -g 'daemon off;'"
