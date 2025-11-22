@@ -15,6 +15,8 @@ RUN flutter pub get
 COPY . .
 
 # Build the web app for production
+# Using --web-renderer html for smaller bundle size and better compatibility
+# For better graphics, change to: --web-renderer canvaskit
 RUN flutter build web --release --web-renderer html
 
 # Stage 2: Serve the app with nginx
