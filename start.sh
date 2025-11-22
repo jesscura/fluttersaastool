@@ -27,7 +27,7 @@ flutter pub get
 # Generate code if build_runner is configured
 if grep -q "build_runner" pubspec.yaml; then
     echo "🔨 Running build_runner..."
-    flutter pub run build_runner build --delete-conflicting-outputs
+    dart run build_runner build --delete-conflicting-outputs
 fi
 
 # Run the app
