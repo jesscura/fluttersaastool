@@ -1,0 +1,30 @@
+{
+  "name": "Flutter SaaS Tool - Email Marketing & CRM",
+  "description": "A comprehensive email marketing and CRM tool built with Flutter, featuring functionality similar to MailChimp, Snov.io, and Monday.com",
+  "repository": "https://github.com/jesscura/fluttersaastool",
+  "logo": "https://raw.githubusercontent.com/flutter/website/main/src/assets/images/flutter-logo-sharing.png",
+  "deploy": {
+    "services": [
+      {
+        "name": "flutter-saas-tool",
+        "plan": "hobby",
+        "runtime": "dockerfile",
+        "dockerfile": "Dockerfile",
+        "healthcheck": {
+          "path": "/",
+          "interval": 30,
+          "timeout": 10
+        },
+        "domains": [
+          {
+            "domain": "${{RAILWAY_STATIC_URL}}",
+            "wildcard": false
+          }
+        ],
+        "env": {
+          "PORT": "8080"
+        }
+      }
+    ]
+  }
+}

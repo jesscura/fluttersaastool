@@ -71,7 +71,20 @@ A comprehensive email marketing and CRM tool built with Flutter, featuring funct
 
 ## Deployment
 
-### Web
+### Railway (Recommended for Web) 🚂
+Deploy to [Railway](https://railway.app/) with one click:
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/jesscura/fluttersaastool)
+
+For detailed instructions, see [RAILWAY.md](./RAILWAY.md)
+
+**Quick Start:**
+1. Sign in to Railway with GitHub
+2. Create new project from this repository
+3. Railway automatically builds and deploys
+4. Get your app URL instantly
+
+### Web (Manual Build)
 ```bash
 flutter build web --release
 ```
@@ -86,6 +99,8 @@ flutter build appbundle --release
 ```bash
 flutter build ipa --release
 ```
+
+For detailed deployment instructions for all platforms, see [DEPLOYMENT.md](./DEPLOYMENT.md)
 
 ## Project Structure
 
